@@ -74,7 +74,10 @@
         ];
       };
       ruff-format.enable = true;
-      typstyle.enable = true;
+      typstyle = {
+        enable = true;
+        wrapText = true;
+      };
     };
   };
 }
