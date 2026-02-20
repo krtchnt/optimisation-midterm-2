@@ -72,6 +72,7 @@
           "*.md"
           "*.yaml"
         ];
+        settings.proseWrap = "always";
       };
       ruff-format.enable = true;
       typstyle = {
