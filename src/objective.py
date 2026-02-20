@@ -37,7 +37,7 @@ class ObjectiveFunction:
         # Two-qubit gate errors along routing paths
         for i, j, w in self.interactions:
             cost += w * self.path_err[mapping[i]][mapping[j]]
-        # Single-qubit gate errors: depth(i) * ε₁(π(i))
+        # Single-qubit gate errors: depth(i) * epsilon_1(pi(i))
         for i in range(self.n_logical):
             e1 = self.coupling.vertex_attrs[mapping[i]].get("e1", 0.0)
             cost += self.inst.qubit_depths[i] * e1
@@ -116,7 +116,7 @@ class ObjectiveFunction:
             new_e = self.path_err[new_pa][new_pb]
             delta_noise += w * (new_e - old_e)
 
-        # Single-qubit error delta: swapping changes which ε₁ each qubit sees
+        # Single-qubit error delta: swapping changes which epsilon_1 each qubit sees
         e1_pi = self.coupling.vertex_attrs[pi].get("e1", 0.0)
         e1_pj = self.coupling.vertex_attrs[pj].get("e1", 0.0)
         depth_i = self.inst.qubit_depths[i]

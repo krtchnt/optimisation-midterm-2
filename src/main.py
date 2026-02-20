@@ -4,7 +4,7 @@ Solves the problem of mapping logical qubits to physical qubits on a
 quantum processor's coupling graph, minimising routing cost (SWAP overhead)
 and accumulated gate noise, subject to coherence time constraints.
 
-Solved using Simulated Annealing — the classical analogue of Quantum Annealing.
+Solved using Simulated Annealing - the classical analogue of Quantum Annealing.
 """
 
 from __future__ import annotations
